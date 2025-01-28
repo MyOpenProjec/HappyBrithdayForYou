@@ -81,17 +81,15 @@ textarea {
     background-color: #ce2cff;
 }
 
-
 .heart {
     background-color: red;
     display: inline-block;
-    height: 60px;
-    margin: 0 10px;
-    position: relative;
-    top: 0;
-    transform: rotate(-45deg);
     width: 60px;
-    transition: transform 0.3s ease-in-out; /* Menambahkan transisi saat diperbesar */
+    height: 60px;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -100,9 +98,9 @@ textarea {
     content: "";
     background-color: red;
     border-radius: 50%;
-    height: 60px;
     position: absolute;
     width: 60px;
+    height: 60px;
 }
 
 .heart:before {
@@ -111,16 +109,16 @@ textarea {
 }
 
 .heart:after {
-    left: 30px;
     top: 0;
+    left: 30px;
 }
 
 /* Efek Hover */
 .heart:hover {
-    transform: rotate(-45deg) scale(1.2); /* Memperbesar hati saat hover */
+    transform: rotate(-45deg) scale(1.2);
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .heart {
         width: 50px;
@@ -142,7 +140,6 @@ textarea {
     }
 }
 
-/* Media Queries for Smaller Mobile Screens */
 @media (max-width: 480px) {
     .heart {
         width: 40px;
@@ -163,3 +160,4 @@ textarea {
         left: 20px;
     }
 }
+
