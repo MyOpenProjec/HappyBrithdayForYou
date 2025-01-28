@@ -122,58 +122,44 @@ textarea {
 
 
 @media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-
-    .container, .massage-container {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .gif {
-        width: 150px;
-        height: 150px;
-    }
-
-    .text {
-        font-size: 1.2rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    textarea {
-        width: 90%;
-        font-size: 0.9rem;
-    }
-
     .heart {
-        height: 50px;
         width: 50px;
+        height: 50px;
+    }
+
+    .heart:before,
+    .heart:after {
+        width: 50px;
+        height: 50px;
+    }
+
+    .heart:before {
+        top: -25px;
+    }
+
+    .heart:after {
+        left: 25px;
     }
 }
 
 /* Media Queries for Smaller Mobile Screens */
 @media (max-width: 480px) {
-    .gif {
-        width: 120px;
-        height: 120px;
-    }
-
-    .text {
-        font-size: 1rem;
-    }
-
-    button {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
-
     .heart {
-        height: 40px;
         width: 40px;
+        height: 40px;
+    }
+
+    .heart:before,
+    .heart:after {
+        width: 40px;
+        height: 40px;
+    }
+
+    .heart:before {
+        top: -20px;
+    }
+
+    .heart:after {
+        left: 20px;
     }
 }
