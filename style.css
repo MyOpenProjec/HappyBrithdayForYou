@@ -1,0 +1,179 @@
+body {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(asset/wallpaper.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ff9cc5;
+    flex-direction: column;
+}
+
+
+.container, .massage-container {
+    text-align: center;
+    border: 2px solid #ff7ef4; 
+    border-radius: 15px; 
+    padding: 30px; 
+    background-color: #ffff; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    width: 500px;
+    height: auto;
+}
+
+.container, .massage-container, .content, .massage-content {
+    margin: 20px;
+    transition: transform 0.5s ease-in-out; /* Menambahkan transisi */
+}
+
+.container.scale-up, .content.scale-up, .massage-container.scale-up, .massage-content.scale-up {
+    transform: scale(0.8); /* Efek perbesaran */
+}
+
+.gif {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #c79cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #9b52fc;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.massage-content button {
+    background-color: #f28cff;
+}
+
+.massage-content button:hover {
+    background-color: #ce2cff;
+}
+
+
+.heart {
+    background-color: red;
+    display: inline-block;
+    height: 60px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 60px;
+    transition: transform 0.3s ease-in-out; /* Menambahkan transisi saat diperbesar */
+    cursor: pointer;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+}
+
+.heart:before {
+    top: -30px;
+    left: 0;
+}
+
+.heart:after {
+    left: 30px;
+    top: 0;
+}
+
+/* Efek Hover */
+.heart:hover {
+    transform: rotate(-45deg) scale(1.2); /* Memperbesar hati saat hover */
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container, .massage-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .gif {
+        width: 150px;
+        height: 150px;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    textarea {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .heart {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Media Queries for Smaller Mobile Screens */
+@media (max-width: 480px) {
+    .gif {
+        width: 120px;
+        height: 120px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .heart {
+        height: 40px;
+        width: 40px;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lilita+One&family=Montserrat:ital,wght@0,500;1,500&family=Poppins:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <div class="Start-container">
+        <div class="Start-content">
+            <div class="heart" onclick="start()"></div>
+        </div>
+    </div>
+
+
+    <div class="container" style="display: none;">
+        <div class="content">
+            <img src="" alt="gif" class="gif">
+            <p class="text"></p>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+
+    <div class="massage-container" style="display: none;">
+        <div class="massage-content">
+            <h2>Message me</h2>
+            <textarea class="text-massage" placeholder="Send Message to me..."></textarea>
+            <button onclick="send()">Send Massage</button>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+    
+
+<audio autoplay loop>
+    <source src="sound/Audio.mp3" type="audio/mp3">
+</audio>
+
+</html>
