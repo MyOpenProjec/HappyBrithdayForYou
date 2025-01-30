@@ -118,46 +118,25 @@ textarea {
     transform: rotate(-45deg) scale(1.2);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
+    .container, .massage-container {
+        width: 50%;
+        padding: 20px;
+    }
+    .text {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 0.9rem;
+    }
     .heart {
         width: 50px;
         height: 50px;
     }
-
-    .heart:before,
-    .heart:after {
+    .heart:before, .heart:after {
         width: 50px;
         height: 50px;
-    }
-
-    .heart:before {
-        top: -25px;
-    }
-
-    .heart:after {
-        left: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .heart {
-        width: 40px;
-        height: 40px;
-    }
-
-    .heart:before,
-    .heart:after {
-        width: 40px;
-        height: 40px;
-    }
-
-    .heart:before {
-        top: -20px;
-    }
-
-    .heart:after {
-        left: 20px;
     }
 }
 
