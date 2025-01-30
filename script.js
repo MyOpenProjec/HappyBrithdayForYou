@@ -87,13 +87,22 @@ function send() {
 }
 
 
-window.addEventListener("DOMContentLoaded", () => {
-    const audio = new Audio("sound/Audio.mp3");
-    audio.loop = true; // Ulang terus
-    audio.play().catch(error => {
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("bg-music");
+
+    // Coba autoplay saat halaman dimuat
+    audio.play().then(() => {
+        console.log("Audio diputar otomatis.");
+    }).catch(error => {
         console.log("Autoplay gagal, menunggu interaksi pengguna:", error);
+
+        // Jika autoplay gagal, tunggu klik pertama pengguna
+        document.body.addEventListener("click", () => {
+            audio.play().catch(err => console.log("Masih gagal:", err));
+        }, { once: true }); // hanya sekali
     });
 });
+
 
 window.onload = function() {
     next();
