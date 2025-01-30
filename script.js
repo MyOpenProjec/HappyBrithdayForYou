@@ -75,10 +75,12 @@ function next() {
 
 function send() {
     const message = document.querySelector(".text-massage").value;
-    const phoneNumber = "6282182058737"; // Ganti dengan nomor WA Anda
+    const email = "natvale26@gmail.com"; // Ganti dengan alamat email Anda
+    const subject = "Message From Website";
+    
     if (message.trim() !== "") {
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappURL, "_blank");
+        const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+        window.location.href = mailtoURL;
     } else {
         alert("Please enter a message.");
     }
